@@ -319,3 +319,170 @@ footer p {
     }
 
 }
+/* =========================
+   CGPA CALCULATOR
+========================= */
+
+.calculator-section {
+    min-height: 800px;
+    padding: 80px 8%;
+    background: #f7f9fc;
+}
+
+.calculator-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.calculator-heading h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.calculator-heading h1 span {
+    color: #5b5ce2;
+}
+
+.calculator-heading p {
+    color: #687083;
+    font-size: 17px;
+}
+
+
+/* Calculator Card */
+
+.calculator-card {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.input-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.input-header h2 {
+    font-size: 24px;
+}
+
+#addSubject {
+    border: none;
+    background: #ececff;
+    color: #5556c9;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* Subject Row */
+
+.subject-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 45px;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.subject-row input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dddfe7;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.subject-row input:focus {
+    border-color: #5b5ce2;
+}
+
+
+/* Remove Button */
+
+.remove-btn {
+    border: none;
+    background: #ffecec;
+    color: #e44;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Calculate */
+
+.calculate-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #5b5ce2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* Result */
+
+.result-box {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background: #f5f5ff;
+    border-radius: 15px;
+}
+
+.result-box p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.result-box h2 {
+    font-size: 55px;
+    color: #5b5ce2;
+    margin: 5px 0;
+}
+
+.result-box span {
+    color: #555;
+    font-weight: 600;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .calculator-card {
+        padding: 20px;
+    }
+
+    .subject-row {
+        grid-template-columns: 1fr;
+    }
+
+    .remove-btn {
+        height: 40px;
+    }
+
+    .calculator-heading h1 {
+        font-size: 38px;
+    }
+
+}

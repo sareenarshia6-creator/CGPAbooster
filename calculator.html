@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CGPA Calculator | CGPA Booster</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 CGPA Booster
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+        <button class="login-btn">
+            Get Started
+        </button>
+
+    </header>
+
+
+    <!-- Calculator Section -->
+
+    <section class="calculator-section">
+
+        <div class="calculator-heading">
+
+            <span class="tag">
+                🧮 CGPA CALCULATOR
+            </span>
+
+            <h1>
+                Calculate Your
+                <span>SGPA</span>
+            </h1>
+
+            <p>
+                Enter your subjects, credits and grade points
+                to calculate your semester SGPA.
+            </p>
+
+        </div>
+
+
+        <!-- Calculator Card -->
+
+        <div class="calculator-card">
+
+            <div class="input-header">
+
+                <h2>Semester Details</h2>
+
+                <button id="addSubject">
+                    + Add Subject
+                </button>
+
+            </div>
+
+
+            <!-- Subjects -->
+
+            <div id="subjectsContainer">
+
+                <div class="subject-row">
+
+                    <input
+                        type="text"
+                        placeholder="Subject Name"
+                        class="subject-name"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Credits"
+                        class="credits"
+                        min="1"
+                        max="10"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Grade Point"
+                        class="grade"
+                        min="0"
+                        max="10"
+                    >
+
+                    <button class="remove-btn">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="subject-row">
+
+                    <input
+                        type="text"
+                        placeholder="Subject Name"
+                        class="subject-name"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Credits"
+                        class="credits"
+                        min="1"
+                        max="10"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Grade Point"
+                        class="grade"
+                        min="0"
+                        max="10"
+                    >
+
+                    <button class="remove-btn">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Calculate Button -->
+
+            <button
+                class="calculate-btn"
+                id="calculateBtn"
+            >
+                Calculate SGPA
+            </button>
+
+
+            <!-- Result -->
+
+            <div
+                class="result-box"
+                id="resultBox"
+            >
+
+                <p>Your SGPA</p>
+
+                <h2 id="sgpaResult">
+                    0.00
+                </h2>
+
+                <span id="performanceText">
+                    Enter your details above
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/calculator.js"></script>
+
+</body>
+
+</html>
