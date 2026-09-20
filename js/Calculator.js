@@ -1,4 +1,9 @@
-const addSubjectBtn = document.getElementById("addSubject");
+// =========================
+// GET HTML ELEMENTS
+// =========================
+
+const addSubjectBtn =
+    document.getElementById("addSubject");
 
 const subjectsContainer =
     document.getElementById("subjectsContainer");
@@ -7,7 +12,9 @@ const calculateBtn =
     document.getElementById("calculateBtn");
 
 
-// Add Subject
+// =========================
+// ADD SUBJECT
+// =========================
 
 addSubjectBtn.addEventListener("click", function () {
 
@@ -48,7 +55,9 @@ addSubjectBtn.addEventListener("click", function () {
 });
 
 
-// Remove Subject
+// =========================
+// REMOVE SUBJECT
+// =========================
 
 subjectsContainer.addEventListener("click", function (event) {
 
@@ -61,98 +70,245 @@ subjectsContainer.addEventListener("click", function (event) {
 });
 
 
-// Calculate SGPA
+// =========================
+// CALCULATE SGPA
+// =========================
 
 calculateBtn.addEventListener("click", function () {
 
-    const credits =
-        document.querySelectorAll(".credits");
 
-    const grades =
-        document.querySelectorAll(".grade");
+    // =========================
+    // GET SEMESTER NUMBER
+    // =========================
 
-
-    let totalCredits = 0;
-
-    let totalPoints = 0;
-
-
-    for (let i = 0; i < credits.length; i++) {
-
-        const credit =
-            Number(credits[i].value);
-
-        const grade =
-            Number(grades[i].value);
+    const semesterNumber =
+        Number(
+            document.getElementById("semesterNumber").value
+        );
 
 
-        if (
-            credits[i].value === "" ||
-            grades[i].value === ""
-        ) {
-            continue;
-        }
+    // Check semester number
 
+    if (
+        semesterNumber < 1 ||
+        semesterNumber > 8
+    ) {
 
-        totalCredits += credit;
-
-        totalPoints += credit * grade;
-
-    }
-
-
-    if (totalCredits === 0) {
-
-        alert("Please enter credits and grade points.");
+        alert(
+            "Please enter a semester number between 1 and 8."
+        );
 
         return;
 
     }
 
 
+    // =========================
+    // GET ALL SUBJECT ROWS
+    // =========================
+
+    const rows =
+        document.querySelectorAll(".subject-row");
+
+
+    let totalCredits = 0;
+
+    let totalPoints = 0;
+
+    let subjects = [];
+
+
+    // =========================
+    // READ SUBJECT DATA
+    // =========================
+
+    rows.forEach(function (row) {
+
+        const subjectName =
+            row
+                .querySelector(".subject-name")
+                .value
+                .trim();
+
+
+        const credit =
+            Number(
+                row
+                    .querySelector(".credits")
+                    .value
+            );
+
+
+        const grade =
+            Number(
+                row
+                    .querySelector(".grade")
+                    .value
+            );
+
+
+        // Check valid data
+
+        if (
+            subjectName !== "" &&
+            credit > 0 &&
+            grade >= 0 &&
+            grade <= 10
+        ) {
+
+
+            // Add credits
+
+            totalCredits += credit;
+
+
+            // Calculate credit × grade
+
+            totalPoints +=
+                credit * grade;
+
+
+            // Store subject
+
+            subjects.push({
+
+                name: subjectName,
+
+                credits: credit,
+
+                grade: grade
+
+            });
+
+        }
+
+    });
+
+
+    // =========================
+    // CHECK SUBJECT DATA
+    // =========================
+
+    if (subjects.length === 0) {
+
+        alert(
+            "Please enter at least one subject."
+        );
+
+        return;
+
+    }
+
+
+    // =========================
+    // CALCULATE SGPA
+    // =========================
+
     const sgpa =
         totalPoints / totalCredits;
 
 
+    // =========================
+    // SHOW SGPA
+    // =========================
+
     document.getElementById("sgpaResult")
-        .textContent = sgpa.toFixed(2);
+        .textContent =
+        sgpa.toFixed(2);
 
 
-    let message = "";
+    // =========================
+    // PERFORMANCE MESSAGE
+    // =========================
+
+    let message;
 
 
     if (sgpa >= 9) {
 
-        message = "Excellent Performance 🎉";
+        message =
+            "Excellent Performance 🎉";
 
     }
 
     else if (sgpa >= 8) {
 
-        message = "Very Good Performance 👏";
+        message =
+            "Very Good Performance 👏";
 
     }
 
     else if (sgpa >= 7) {
 
-        message = "Good Performance 👍";
+        message =
+            "Good Performance 👍";
 
     }
 
     else if (sgpa >= 6) {
 
-        message = "Keep Improving 💪";
+        message =
+            "Keep Improving 💪";
 
     }
 
     else {
 
-        message = "You Can Do Better 📚";
+        message =
+            "You Can Do Better 📚";
 
     }
 
 
     document.getElementById("performanceText")
-        .textContent = message;
+        .textContent =
+        message;
+
+
+    // =========================
+    // CREATE SEMESTER DATA
+    // =========================
+
+    const semesterData = {
+
+        semester: semesterNumber,
+
+        sgpa: Number(
+            sgpa.toFixed(2)
+        ),
+
+        credits: totalCredits,
+
+        subjects: subjects,
+
+        date:
+            new Date()
+                .toLocaleDateString()
+
+    };
+
+
+    // =========================
+    // SAVE DATA IN LOCAL STORAGE
+    // =========================
+
+    localStorage.setItem(
+
+        "latestSemester",
+
+        JSON.stringify(semesterData)
+
+    );
+
+
+    // =========================
+    // SUCCESS MESSAGE
+    // =========================
+
+    alert(
+        "Semester " +
+        semesterNumber +
+        " saved successfully! 🎉"
+    );
 
 });

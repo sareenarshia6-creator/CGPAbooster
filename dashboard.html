@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | CGPA Booster</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 CGPA Booster
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+        <button class="login-btn">
+            Get Started
+        </button>
+
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <main class="dashboard">
+
+        <div class="dashboard-heading">
+
+            <div>
+                <span class="tag">📊 MY DASHBOARD</span>
+
+                <h1>
+                    Academic
+                    <span>Performance</span>
+                </h1>
+
+                <p>
+                    Track your semester performance and
+                    monitor your academic progress.
+                </p>
+            </div>
+
+            <a href="calculator.html" class="primary-btn">
+                + Add Semester
+            </a>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    🎓
+                </div>
+
+                <p>Current CGPA</p>
+
+                <h2 id="currentCGPA">
+                    8.47
+                </h2>
+
+                <small>
+                    Overall performance
+                </small>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    📈
+                </div>
+
+                <p>Latest SGPA</p>
+
+                <h2 id="latestSGPA">
+                    8.47
+                </h2>
+
+                <small>
+                    Current semester
+                </small>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    📚
+                </div>
+
+                <p>Total Subjects</p>
+
+                <h2>
+                    42
+                </h2>
+
+                <small>
+                    Completed subjects
+                </small>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    🏆
+                </div>
+
+                <p>Total Credits</p>
+
+                <h2>
+                    132
+                </h2>
+
+                <small>
+                    Completed credits
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Semester Performance -->
+
+        <section class="performance-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Semester Performance</h2>
+
+                    <p>
+                        Your SGPA across semesters
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="semester-table">
+
+                <div class="table-header">
+                    <span>Semester</span>
+                    <span>Credits</span>
+                    <span>SGPA</span>
+                    <span>Status</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 1</span>
+                    <span>22</span>
+                    <strong>7.80</strong>
+                    <span class="status">Good</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 2</span>
+                    <span>23</span>
+                    <strong>8.10</strong>
+                    <span class="status">Good</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 3</span>
+                    <span>22</span>
+                    <strong>8.30</strong>
+                    <span class="status">Very Good</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 4</span>
+                    <span>21</span>
+                    <strong>8.50</strong>
+                    <span class="status">Very Good</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 5</span>
+                    <span>22</span>
+                    <strong>8.60</strong>
+                    <span class="status">Very Good</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Semester 6</span>
+                    <span>22</span>
+                    <strong>8.72</strong>
+                    <span class="status excellent">
+                        Excellent
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Goal -->
+
+        <section class="goal-card">
+
+            <div>
+
+                <span class="tag">
+                    🎯 CGPA GOAL
+                </span>
+
+                <h2>
+                    Keep working towards your target!
+                </h2>
+
+                <p>
+                    Your current CGPA is 8.47.
+                    Set a target and track your progress.
+                </p>
+
+            </div>
+
+            <div class="goal-number">
+                8.47
+                <small>/ 10</small>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>🎓 CGPA Booster</h3>
+
+        <p>
+            Study smarter. Track better. Score higher.
+        </p>
+
+        <p class="copyright">
+            © 2026 CGPA Booster. College Project.
+        </p>
+
+    </footer>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

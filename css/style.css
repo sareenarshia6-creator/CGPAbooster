@@ -3,17 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background: #f7f9fc;
     color: #172033;
     line-height: 1.6;
 }
-
-
-/* Navbar */
-
 .navbar {
     height: 75px;
     padding: 0 8%;
@@ -23,28 +18,23 @@ body {
     background: white;
     border-bottom: 1px solid #e8ebf0;
 }
-
 .logo {
     font-size: 22px;
     font-weight: 700;
 }
-
 nav {
     display: flex;
     gap: 28px;
 }
-
 nav a {
     text-decoration: none;
     color: #555;
     font-size: 15px;
     font-weight: 500;
 }
-
 nav a:hover {
     color: #5b5ce2;
 }
-
 .login-btn {
     border: none;
     padding: 11px 20px;
@@ -54,10 +44,6 @@ nav a:hover {
     font-weight: 600;
     cursor: pointer;
 }
-
-
-/* Hero */
-
 .hero {
     min-height: 620px;
     padding: 90px 8%;
@@ -66,11 +52,9 @@ nav a:hover {
     justify-content: space-between;
     gap: 60px;
 }
-
 .hero-content {
     max-width: 620px;
 }
-
 .tag {
     display: inline-block;
     background: #ececff;
@@ -81,33 +65,25 @@ nav a:hover {
     font-weight: 600;
     margin-bottom: 20px;
 }
-
 .hero h1 {
     font-size: 60px;
     line-height: 1.1;
     margin-bottom: 25px;
 }
-
 .hero h1 span,
 .section-heading span {
     color: #5b5ce2;
 }
-
 .hero p {
     color: #687083;
     font-size: 18px;
     max-width: 560px;
     margin-bottom: 35px;
 }
-
-
-/* Buttons */
-
 .hero-buttons {
     display: flex;
     gap: 15px;
 }
-
 .primary-btn,
 .secondary-btn {
     text-decoration: none;
@@ -115,21 +91,15 @@ nav a:hover {
     border-radius: 9px;
     font-weight: 600;
 }
-
 .primary-btn {
     background: #5b5ce2;
     color: white;
 }
-
 .secondary-btn {
     background: white;
     color: #333;
     border: 1px solid #ddd;
 }
-
-
-/* CGPA Card */
-
 .hero-card {
     width: 380px;
     background: white;
@@ -137,147 +107,113 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
 }
-
 .card-header {
     display: flex;
     justify-content: space-between;
     color: #70788a;
 }
-
 .cgpa-number {
     font-size: 65px;
     font-weight: 700;
     margin: 15px 0;
 }
-
 .progress-container {
     height: 10px;
     background: #eceef4;
     border-radius: 10px;
     overflow: hidden;
 }
-
 .progress {
     width: 87%;
     height: 100%;
     background: #5b5ce2;
 }
-
 .performance {
     margin: 15px 0 25px;
     color: #5556c9;
     font-weight: 600;
 }
-
 .stats {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
-
 .stats div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .stats strong {
     font-size: 22px;
 }
-
 .stats small {
     color: #777;
 }
-
-
-/* Features */
-
 .features {
     background: white;
     padding: 90px 8%;
 }
-
 .section-heading {
     text-align: center;
     max-width: 650px;
     margin: auto;
 }
-
 .section-heading h2 {
     font-size: 38px;
     line-height: 1.2;
     margin-bottom: 15px;
 }
-
 .section-heading p {
     color: #6d7483;
 }
-
-
 .feature-grid {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
 }
-
 .feature-card {
     padding: 28px;
     border: 1px solid #e7e9ef;
     border-radius: 15px;
     transition: 0.3s;
 }
-
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
 }
-
 .feature-icon {
     font-size: 32px;
     margin-bottom: 18px;
 }
-
 .feature-card h3 {
     margin-bottom: 10px;
 }
-
 .feature-card p {
     color: #707788;
     font-size: 14px;
     margin-bottom: 18px;
 }
-
 .feature-card a {
     color: #5b5ce2;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
 }
-
-
-/* Footer */
-
 footer {
     text-align: center;
     padding: 45px;
     background: #171a2b;
     color: white;
 }
-
 footer p {
     color: #b9bdc9;
 }
-
 .copyright {
     margin-top: 15px;
     font-size: 13px;
 }
-
-
-/* Responsive */
-
 @media (max-width: 900px) {
 
     nav {
@@ -302,8 +238,6 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
 @media (max-width: 600px) {
 
     .hero h1 {
@@ -319,39 +253,27 @@ footer p {
     }
 
 }
-/* =========================
-   CGPA CALCULATOR
-========================= */
-
 .calculator-section {
     min-height: 800px;
     padding: 80px 8%;
     background: #f7f9fc;
 }
-
 .calculator-heading {
     text-align: center;
     max-width: 650px;
     margin: auto;
 }
-
 .calculator-heading h1 {
     font-size: 48px;
     margin-bottom: 15px;
 }
-
 .calculator-heading h1 span {
     color: #5b5ce2;
 }
-
 .calculator-heading p {
     color: #687083;
     font-size: 17px;
 }
-
-
-/* Calculator Card */
-
 .calculator-card {
     max-width: 900px;
     margin: 50px auto;
@@ -360,18 +282,15 @@ footer p {
     border-radius: 20px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
 }
-
 .input-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
 }
-
 .input-header h2 {
     font-size: 24px;
 }
-
 #addSubject {
     border: none;
     background: #ececff;
@@ -381,17 +300,12 @@ footer p {
     font-weight: 600;
     cursor: pointer;
 }
-
-
-/* Subject Row */
-
 .subject-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 45px;
     gap: 12px;
     margin-bottom: 15px;
 }
-
 .subject-row input {
     width: 100%;
     padding: 13px;
@@ -400,14 +314,9 @@ footer p {
     outline: none;
     font-size: 14px;
 }
-
 .subject-row input:focus {
     border-color: #5b5ce2;
 }
-
-
-/* Remove Button */
-
 .remove-btn {
     border: none;
     background: #ffecec;
@@ -416,10 +325,6 @@ footer p {
     font-size: 20px;
     cursor: pointer;
 }
-
-
-/* Calculate */
-
 .calculate-btn {
     width: 100%;
     margin-top: 25px;
@@ -436,10 +341,6 @@ footer p {
 .calculate-btn:hover {
     opacity: 0.9;
 }
-
-
-/* Result */
-
 .result-box {
     margin-top: 30px;
     padding: 30px;
@@ -447,12 +348,10 @@ footer p {
     background: #f5f5ff;
     border-radius: 15px;
 }
-
 .result-box p {
     color: #666;
     margin-bottom: 5px;
 }
-
 .result-box h2 {
     font-size: 55px;
     color: #5b5ce2;
@@ -485,4 +384,154 @@ footer p {
         font-size: 38px;
     }
 
+}
+.dashboard {
+    padding: 70px 8%;
+    background: #f7f9fc;
+    min-height: 900px;
+}
+.dashboard-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+.dashboard-heading h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+.dashboard-heading h1 span {
+    color: #5b5ce2;
+}
+.dashboard-heading p {
+    color: #687083;
+}
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e7e9ef;
+}
+
+.dashboard-icon {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+.dashboard-card p {
+    color: #707788;
+    margin-bottom: 5px;
+}
+.dashboard-card h2 {
+    font-size: 35px;
+    margin-bottom: 3px;
+}
+.dashboard-card small {
+    color: #8a91a0;
+}
+.performance-section {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 30px;
+}
+.section-title {
+    margin-bottom: 25px;
+}
+.section-title h2 {
+    font-size: 24px;
+}
+.section-title p {
+    color: #777;
+}
+.semester-table {
+    width: 100%;
+}
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 17px 15px;
+}
+.table-header {
+    background: #f5f5ff;
+    color: #666;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.table-row {
+    border-bottom: 1px solid #eee;
+}
+.table-row strong {
+    color: #5b5ce2;
+}
+.status {
+    color: #4b9b68;
+    font-weight: 600;
+}
+.excellent {
+    color: #5b5ce2;
+}
+.goal-card {
+    margin-top: 30px;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e7e9ef;
+}
+.goal-card h2 {
+    margin: 5px 0;
+}
+.goal-card p {
+    color: #707788;
+}
+.goal-number {
+    font-size: 55px;
+    font-weight: 700;
+    color: #5b5ce2;
+}
+.goal-number small {
+    font-size: 18px;
+    color: #777;
+}
+@media (max-width: 1000px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .dashboard {
+        padding: 50px 5%;
+    }
+    .dashboard-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dashboard-heading h1 {
+        font-size: 36px;
+    }
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    .table-header,
+    .table-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        font-size: 13px;
+    }
+    .goal-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
