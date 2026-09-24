@@ -292,13 +292,69 @@ calculateBtn.addEventListener("click", function () {
     // SAVE DATA IN LOCAL STORAGE
     // =========================
 
-    localStorage.setItem(
+    // Get previously saved semesters
 
-        "latestSemester",
+let semesters =
+    JSON.parse(
+        localStorage.getItem("semesters")
+    ) || [];
 
-        JSON.stringify(semesterData)
 
+// Check if this semester already exists
+
+const existingIndex =
+    semesters.findIndex(function (semester) {
+
+        return semester.semester === semesterNumber;
+
+    });
+
+
+// If semester already exists,
+// update it
+
+if (existingIndex !== -1) {
+
+    semesters[existingIndex] =
+        semesterData;
+
+}
+
+
+// Otherwise add new semester
+
+else {
+
+    semesters.push(
+        semesterData
     );
+
+}
+
+
+// Sort semesters by semester number
+
+semesters.sort(function (a, b) {
+
+    return a.semester - b.semester;
+
+});
+
+
+// Save all semesters
+
+localStorage.setItem(
+    "semesters",
+    JSON.stringify(semesters)
+);
+
+
+// Also save latest semester
+
+localStorage.setItem(
+    "latestSemester",
+    JSON.stringify(semesterData)
+);
 
 
     // =========================
